@@ -93,10 +93,6 @@ function testAPI(token) {
           console.log('Successful data registration for: ' + serverRes.data.fbData.name);
           localStorage.setItem('jwtToken', serverRes.data.token);
           localStorage.setItem('userID', serverRes.data.userData._id);
-          // localStorage.setItem('profile_pic_URL', response.data.fbData.picture.data.url) ;
-          // console.log(localStorage.profile_pic_URL);
-          // console.log($('#user-welcome').text());
-
         }
       })
       .catch((error) => {

@@ -1,9 +1,9 @@
 <template id="">
   <div id="Navbar">
-    <nav class="navbar is-transparent is-black">
+    <nav class="navbar is-transparent is-dark">
       <div class="navbar-brand">
         <a class="navbar-item" href="/">
-          <h1 class="title has-text-white">Over a Mug of Hot Chocolate</h1>
+          <h1 class="title has-text-white">JepretGram</h1>
         </a>
         <div class="navbar-burger burger" data-target="mainNavigation">
           <span></span>

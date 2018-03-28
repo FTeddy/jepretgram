@@ -49,5 +49,24 @@ module.exports = {
           err
         })
       })
+  },
+  getVotes: (req, res) => {
+    Vote.find({picId: req.params.picId})
+      .populate('userId')
+      .exec()
+      .then(foundVotes => {
+        if (foundVotes === null) {
+          foundVotes = []
+        }
+        res.status(200).json({
+          message: 'got votes!',
+          votes: foundVotes
+        })
+      }).catch(err => {
+        res.status(500).json({
+          message: 'Something went wrong',
+          err
+        })
+      })
   }
 };

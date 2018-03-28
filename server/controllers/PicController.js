@@ -4,6 +4,7 @@ const User = require('../models/user')
 module.exports = {
   getRecent: (req, res) => {
     Pic.find()
+      .populate('userId')
       .limit(20)
       .exec()
       .then(foundPics => {

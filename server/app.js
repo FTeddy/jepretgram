@@ -9,7 +9,7 @@ const mongoose = require('mongoose')
 require('dotenv').config()
 
 const index = require('./routes/index');
-const users = require('./routes/users');
+// const users = require('./routes/users');
 const fb = require('./routes/fb-api');
 const pics = require('./routes/pics')
 const vote =require('./routes/vote')
@@ -34,7 +34,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
-app.use('/users', users);
+// app.use('/users', users);
 app.use('/fb', fb);
 app.use('/pics', pics);
 app.use('/vote', vote);

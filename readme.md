@@ -18,10 +18,14 @@ npm run build
 
 # Server Api
 
-```
-// Signin
-post Users/fb/
-
-post pics/upload/
-get pics/
-```
+| Route          | HTTP   | Description  |
+| -------------- |:------:| ------------:|
+| /fb/    | GET   | Signup with new user |
+| /pics/    | GET   | get recent images |
+| /pics/:userId    | GET   | get user's pic |
+| /pics/:picId    | GET   | get one pic |
+| /pics/post/:userId    | POST   | post new image and caps |
+| /pics/edit/:picId/:userId    | PUT   | edit image caps |
+| /pics/delete/:picId/userId    | DELETE   | delete image |
+| /vote/up/:picId/:userId    | POST   | voteup image |
+| /vote/down/:picId/:userId    | POST   | delete vote of user in image |

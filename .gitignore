@@ -1,4 +1,5 @@
 server/node_modules/
-server/.env
 server/fancy-to-do-684a7e877064.json
 client/node_modulse/
+.env
+server/.env

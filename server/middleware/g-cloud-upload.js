@@ -47,7 +47,7 @@ function googleUpload (req, res, next) {
     file.makePublic()
       .then(() => {
         console.log('upload finished');
-        req.file.cloudStoragePublicUrl = storageUrl(uploadName);
+        req.file.cloudUrl = storageUrl(uploadName);
         next();
       });
   });

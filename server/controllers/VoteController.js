@@ -1,11 +1,11 @@
 const Vote = require('../models/vote')
-const User = require('../models/User')
+const User = require('../models/user')
 
 module.exports = {
   voteImage: (req, res) => {
     let newVote = new Vote({
       value: 1,
-      userId: req.params.userId
+      userId: req.params.userId,
       picId: req.params.picId
     })
     newVote.save((err, savedVote) => {
@@ -32,10 +32,10 @@ module.exports = {
           })
         }
         foundVote.remove()
-          .then(deletedVote = {
+          .then(deletedVote => {
             res.status(200).json({
               message: 'Successfully deleted Vote',
-              vote: removedVote
+              vote: deletedVote
             })
           }).catch(err => {
             res.status(500).json({

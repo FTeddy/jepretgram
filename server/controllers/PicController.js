@@ -51,6 +51,8 @@ module.exports = {
       })
   },
   postPic: (req, res) => {
+    console.log(req.decoded);
+    console.log(req.file.cloudUrl);
     User.findOne({
       name: req.decoded.name,
       email: req.decoded.email
@@ -64,8 +66,8 @@ module.exports = {
         let imgUrl = req.file.cloudUrl
         let newPic = new Pic({
           imgUrl: imgUrl,
-          caption: req.body.caption
-          userId; foundUser._id
+          caption: req.body.caption,
+          userId: foundUser._id
         })
         foundUser.picId.push(newPic._id)
         foundUser.save((err, savedUser) => {
@@ -146,4 +148,5 @@ module.exports = {
           err
         })
       })
-};
+  }
+}

@@ -8,6 +8,6 @@ const UserController = require('../controllers/UserController.js')
 // router.get('/', function(req, res, next) {
 //   res.render('index', { title: 'Express' });
 // });
-router.get('/', JWT.getJWT, UserController.fbLogin)
+router.post('/', JWT.getJWT, UserController.fbLogin)
 
 module.exports = router;
